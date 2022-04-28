@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleSelectedItems:
-    m_Keys: []
-    m_Values: 
+    m_Keys:
+    - Assets/Game/Level_Dont_Touch/Environment_Model/Market/NavMesh.asset
+    - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/ForcedReset.cs
+    - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/SimpleActivatorMenu.cs
+    - 
+    m_Values: 00000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

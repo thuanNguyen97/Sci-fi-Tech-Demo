@@ -1,0 +1,241 @@
+Using pre-set license
+Built from '2021.2/staging' branch; Version is '2021.2.8f1 (d0e5f0a7b06a) revision 13690352'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit Core' Language: 'en' Physical Memory: 16225 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity Editor\2021.2.8f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker3
+-projectPath
+F:/Projects/Unity/Sci-fi Tech Demo
+-logFile
+Logs/AssetImportWorker3.log
+-srvPort
+54855
+Successfully changed project path to: F:/Projects/Unity/Sci-fi Tech Demo
+F:/Projects/Unity/Sci-fi Tech Demo
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 121.33 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.2.8f1 (d0e5f0a7b06a)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path F:/Projects/Unity/Sci-fi Tech Demo/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1650 (ID=0x1f91)
+    Vendor:   NVIDIA
+    VRAM:     3962 MB
+    Driver:   30.0.15.1215
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56644
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity Editor/2021.2.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.008416 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 124.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.003 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1004ms)
+		BeginReloadAssembly (92ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (754ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (196ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (45ms)
+			SetupLoadedEditorAssemblies (435ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (125ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (229ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004282 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image F:\Projects\Unity\Sci-fi Tech Demo\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image F:\Projects\Unity\Sci-fi Tech Demo\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.540 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2541ms)
+		BeginReloadAssembly (178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (34ms)
+		EndReloadAssembly (2215ms)
+			LoadAssemblies (105ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (359ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (119ms)
+			SetupLoadedEditorAssemblies (1551ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (99ms)
+				ProcessInitializeOnLoadAttributes (449ms)
+				ProcessInitializeOnLoadMethodAttributes (974ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.14 seconds
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3280 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 26 unused Assets / (112.5 KB). Loaded Objects now: 3742.
+Memory consumption went from 115.4 MB to 115.2 MB.
+Total: 4.424600 ms (FindLiveObjects: 0.281200 ms CreateObjectMapping: 0.217200 ms MarkObjects: 3.787000 ms  DeleteObjects: 0.137900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 596337.458992 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Materials/SecurityRoom/SecurityFloorGlow.mat
+  artifactKey: Guid(195f2b6dedee1a2488f5f56a87e95909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Materials/SecurityRoom/SecurityFloorGlow.mat using Guid(195f2b6dedee1a2488f5f56a87e95909) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dbf5bd0e0abda825e2f18a24db2c195') in 0.248927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/SecurityRoom/FloorLight.tif
+  artifactKey: Guid(d0063a7e961263b4d8c43f7dc163ef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/SecurityRoom/FloorLight.tif using Guid(d0063a7e961263b4d8c43f7dc163ef52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a87bb5e3b8b31c3cab92262f94764f73') in 0.096450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Game/Game_Models/Market_Collision.FBX
+  artifactKey: Guid(e582ad25494856c48a62bb7a4e4b4143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Game_Models/Market_Collision.FBX using Guid(e582ad25494856c48a62bb7a4e4b4143) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e57f6e7c2d24b3c423dce84addc63f1') in 0.100194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Cinema Suite/About/Editor/Resources/CMFLogo.jpg
+  artifactKey: Guid(a4bdffb92081a884081e50caac0b5d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Cinema Suite/About/Editor/Resources/CMFLogo.jpg using Guid(a4bdffb92081a884081e50caac0b5d26) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ff10660dd07d14f92ad641dece06f5d') in 0.049695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Materials/SecurityRoom/SecurityRoomFloor.mat
+  artifactKey: Guid(6f66348a4070a4c4fb04de32986786c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Materials/SecurityRoom/SecurityRoomFloor.mat using Guid(6f66348a4070a4c4fb04de32986786c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fff7d8d70c1c1af916819dc8c44bb4') in 0.047845 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Models/SecurityRoomEnvironment.FBX
+  artifactKey: Guid(6544875a22773ee408686dd0c78d9c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Models/SecurityRoomEnvironment.FBX using Guid(6544875a22773ee408686dd0c78d9c17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ec59ea0fb1cfffad0a0ab68bb216a1') in 0.647188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/Market_Crates.mat
+  artifactKey: Guid(4f73650538e7e9447aa0531dc0120177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/Market_Crates.mat using Guid(4f73650538e7e9447aa0531dc0120177) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce86826f7d346aa31acf7dc41459937e') in 0.020951 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/Market_Aircon.mat
+  artifactKey: Guid(683667ff6f3a8784b8e9a7104b170b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/Market_Aircon.mat using Guid(683667ff6f3a8784b8e9a7104b170b4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c6ff2b85d3b857cf7e59cced7dfea9e') in 0.018769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000129 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFishSignNeon.png
+  artifactKey: Guid(1f7e69f695c34aa4eb96e9309660d3bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFishSignNeon.png using Guid(1f7e69f695c34aa4eb96e9309660d3bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e94bef9b9415cd601fec8d78f94b7a9e') in 0.123670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/SecurityRoom_Floor.mat
+  artifactKey: Guid(d66f730824bd0e74ab7e23ef6feaf084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Models/Materials/SecurityRoom_Floor.mat using Guid(d66f730824bd0e74ab7e23ef6feaf084) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd7c65d5ed6b05453b7cf1b5134ecb5e') in 0.020565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorMetalAlbedo.tif
+  artifactKey: Guid(a600502155988e64f9d45b079ad18278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorMetalAlbedo.tif using Guid(a600502155988e64f9d45b079ad18278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a10786305a698e464821651c7e43250') in 0.019356 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorTileSandAlbedo.tif
+  artifactKey: Guid(90d75d244446a9644888b0a0305f81f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorTileSandAlbedo.tif using Guid(90d75d244446a9644888b0a0305f81f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ef3d8f71c0267571fefe082a04e8942') in 0.013935 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorTileSandAlbedo 1.tif
+  artifactKey: Guid(89876c2014fc44dcb90c0143a0cbe7b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Game/Level_Dont_Touch/Environment_Model/Textures/Environment/Market/MarketFloorTileSandAlbedo 1.tif using Guid(89876c2014fc44dcb90c0143a0cbe7b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7172225f383dc368f5cc95b9212bc0b1') in 0.019148 seconds 
