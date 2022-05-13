@@ -15,10 +15,20 @@ MonoBehaviour:
   SimpleSelectedItems:
     m_Keys:
     - Assets/Game/Level_Dont_Touch/Environment_Model/Market/NavMesh.asset
+    - Assets/Game/Level_Dont_Touch/Environment_Model/Materials/Market/MarketFloorTileSand.mat
     - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/ForcedReset.cs
     - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/SimpleActivatorMenu.cs
+    - Assets/Game/Scripts.meta
+    - Assets/Game/Scripts/Player.cs
+    - Assets/Game/Scripts/Player.cs.meta
+    - Assets/Game/Skybox/Materials/Skybox_Sunset.mat
+    - Assets/Game/Skybox/Scene.meta
+    - Assets/Game/Skybox/Scene/mainScene.unity
+    - Assets/Game/Skybox/Scene/mainScene.unity.meta
+    - Assets/Game/_Scenes/Game.unity
+    - ProjectSettings/ProjectSettings.asset
     - 
-    m_Values: 00000000
+    m_Values: 0000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 

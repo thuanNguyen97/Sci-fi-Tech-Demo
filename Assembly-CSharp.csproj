@@ -61,6 +61,7 @@
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\SimpleMouseRotator.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\ExplosionFireAndDebris.cs" />
+     <Compile Include="Assets\Game\Scripts\Player.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\SmoothFollow.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\WaypointCircuit.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\TimedObjectDestructor.cs" />
