@@ -41,6 +41,8 @@ public class Player : MonoBehaviour
         // apply gravity in every frame
         velocity.y -= _gravity;
 
+        velocity = transform.transform.TransformDirection(velocity); // convert local space to world space
+
         // parsing direction variable to Move()
         _controller.Move(velocity * Time.deltaTime); // *Time.deltaTime to apply it in real time
     }
