@@ -16,12 +16,39 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //hide mouse cursor
+        //and lock it in the center
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         _controller = GetComponent<CharacterController>(); //Get access to Character controller component    
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if left mouse clicked
+        //cast a ray at the center of the main camera
+        if (Input.GetMouseButtonDown(0)) // get mouse left click
+        {
+            Ray rayOrigin = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0)); // cast a ray from the center of the screen
+
+            //check if we ray cast hit something
+            if (Physics.Raycast(rayOrigin, Mathf.Infinity))
+            {
+                Debug.Log("Raycast hit something!!");
+            }
+        }
+
+        //if escape key pressed
+        //unhide mouse cursor
+        //unlock it
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         CalculateMovement();
     }
 

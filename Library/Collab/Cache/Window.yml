@@ -19,16 +19,23 @@ MonoBehaviour:
     - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/ForcedReset.cs
     - Assets/Game/Level_Dont_Touch/Standard Assets/Utility/SimpleActivatorMenu.cs
     - Assets/Game/Scripts.meta
+    - Assets/Game/Scripts/LookX.cs
+    - Assets/Game/Scripts/LookX.cs.meta
+    - Assets/Game/Scripts/LookY.cs
+    - Assets/Game/Scripts/LookY.cs.meta
     - Assets/Game/Scripts/Player.cs
     - Assets/Game/Scripts/Player.cs.meta
     - Assets/Game/Skybox/Materials/Skybox_Sunset.mat
     - Assets/Game/Skybox/Scene.meta
     - Assets/Game/Skybox/Scene/mainScene.unity
     - Assets/Game/Skybox/Scene/mainScene.unity.meta
+    - Assets/Game/_Scenes/Game.meta
     - Assets/Game/_Scenes/Game.unity
+    - Assets/Game/_Scenes/Game/NavMesh.asset
+    - Assets/Game/_Scenes/Game/NavMesh.asset.meta
     - ProjectSettings/ProjectSettings.asset
     - 
-    m_Values: 0000000000000000000000000000
+    m_Values: 000000000000000000000000000000000000000000
   RevisionSummary: 
   ChangesSearchValue: 
   SelectedHistoryRevision: 
