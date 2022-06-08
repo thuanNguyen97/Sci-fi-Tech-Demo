@@ -7,10 +7,15 @@ public class Player : MonoBehaviour
     private CharacterController _controller;
 
     [SerializeField]
+    private GameObject _muzzleFlash;
+
+    [SerializeField]
     private float _speed = 3.5f;
 
     [SerializeReference]
     private float _gravity = 9.8f;
+
+
 
 
     // Start is called before the first frame update
@@ -29,15 +34,25 @@ public class Player : MonoBehaviour
     {
         //if left mouse clicked
         //cast a ray at the center of the main camera
-        if (Input.GetMouseButtonDown(0)) // get mouse left click
+        if (Input.GetMouseButton(0)) // get mouse left click (hold)
         {
-            Ray rayOrigin = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0)); // cast a ray from the center of the screen
+            Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f,  0.5f, 0)); // cast a ray from the center of the screen
+            RaycastHit hitInfo; // this parameter store the data of what we hit
+
+            //turn on muzzle flash
+            _muzzleFlash.SetActive(true);
 
             //check if we ray cast hit something
-            if (Physics.Raycast(rayOrigin, Mathf.Infinity))
+            //get the exact name of what we hit
+            if (Physics.Raycast(rayOrigin, out hitInfo))
             {
-                Debug.Log("Raycast hit something!!");
+                Debug.Log("Hit: " + hitInfo.transform.name);
             }
+        }
+        else 
+        {
+            //turn off muzzle flash
+            _muzzleFlash.SetActive(false);
         }
 
         //if escape key pressed
