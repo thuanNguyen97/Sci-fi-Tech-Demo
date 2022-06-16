@@ -8,15 +8,19 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject _muzzleFlash;
-
+    [SerializeField]
+    private GameObject _hitMarkerPrefab;
     [SerializeField]
     private float _speed = 3.5f;
-
     [SerializeReference]
     private float _gravity = 9.8f;
+    [SerializeField]
+    private AudioSource _weaponAudio;
+    [SerializeField]
+    private int _currentAmmo;
+    private int _maxAmmo = 50;
 
-
-
+    private bool _isReloading;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,9 @@ public class Player : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         _controller = GetComponent<CharacterController>(); //Get access to Character controller component    
+
+        _currentAmmo = _maxAmmo;
+
     }
 
     // Update is called once per frame
@@ -34,25 +41,23 @@ public class Player : MonoBehaviour
     {
         //if left mouse clicked
         //cast a ray at the center of the main camera
-        if (Input.GetMouseButton(0)) // get mouse left click (hold)
+        if (Input.GetMouseButton(0) && _currentAmmo > 0) // get mouse left click (hold)
         {
-            Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f,  0.5f, 0)); // cast a ray from the center of the screen
-            RaycastHit hitInfo; // this parameter store the data of what we hit
-
-            //turn on muzzle flash
-            _muzzleFlash.SetActive(true);
-
-            //check if we ray cast hit something
-            //get the exact name of what we hit
-            if (Physics.Raycast(rayOrigin, out hitInfo))
-            {
-                Debug.Log("Hit: " + hitInfo.transform.name);
-            }
+            Shoot();
         }
         else 
         {
             //turn off muzzle flash
             _muzzleFlash.SetActive(false);
+
+            //turn off weapon sound
+            _weaponAudio.Stop();
+        }
+
+        if (Input.GetKeyDown(KeyCode.R) && _isReloading == false)
+        {
+            _isReloading = true;  
+            StartCoroutine(Reload());
         }
 
         //if escape key pressed
@@ -65,6 +70,37 @@ public class Player : MonoBehaviour
         }
 
         CalculateMovement();
+    }
+
+    void Shoot()
+    {
+        Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f,  0.5f, 0)); // cast a ray from the center of the screen
+            RaycastHit hitInfo; // this parameter store the data of what we hit
+
+            //turn on muzzle flash
+            _muzzleFlash.SetActive(true);
+
+            //minus current ammo
+            _currentAmmo--;
+
+            //if weapon sound is not play
+            //play the weapon sound
+            if (_weaponAudio.isPlaying == false)
+            {
+                _weaponAudio.Play();
+            }
+
+            //check if we ray cast hit something
+            //get the exact name of what we hit
+            if (Physics.Raycast(rayOrigin, out hitInfo))
+            {
+                Debug.Log("Hit: " + hitInfo.transform.name);
+
+                // instantiate hit marker as a game object
+                // then destroy it
+                GameObject hitMarker = (GameObject) Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.identity);
+                Destroy(hitMarker, 0.5f); 
+            }
     }
 
     void CalculateMovement()
@@ -87,5 +123,12 @@ public class Player : MonoBehaviour
 
         // parsing direction variable to Move()
         _controller.Move(velocity * Time.deltaTime); // *Time.deltaTime to apply it in real time
+    }
+
+    IEnumerator Reload()
+    {
+        yield return new WaitForSeconds(1.5f);
+        _currentAmmo = _maxAmmo;
+        _isReloading = false;
     }
 }
