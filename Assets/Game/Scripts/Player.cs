@@ -22,6 +22,8 @@ public class Player : MonoBehaviour
 
     private bool _isReloading;
 
+    private UIManager _uiManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,6 +36,8 @@ public class Player : MonoBehaviour
 
         _currentAmmo = _maxAmmo;
 
+        //find the canvas to access the component of it
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -83,6 +87,9 @@ public class Player : MonoBehaviour
             //minus current ammo
             _currentAmmo--;
 
+            //update ui ammo
+            _uiManager.UpdateAmmo(_currentAmmo);
+
             //if weapon sound is not play
             //play the weapon sound
             if (_weaponAudio.isPlaying == false)
@@ -129,6 +136,10 @@ public class Player : MonoBehaviour
     {
         yield return new WaitForSeconds(1.5f);
         _currentAmmo = _maxAmmo;
+
+        //update ui ammo
+        _uiManager.UpdateAmmo(_currentAmmo);
+
         _isReloading = false;
     }
 }
