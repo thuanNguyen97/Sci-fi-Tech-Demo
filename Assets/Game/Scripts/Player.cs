@@ -24,6 +24,8 @@ public class Player : MonoBehaviour
 
     private UIManager _uiManager;
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
