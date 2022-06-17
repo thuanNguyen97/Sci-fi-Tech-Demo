@@ -50,6 +50,7 @@
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\Joystick.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\SmokeParticles.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Game\Scripts\Coin.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\CurveControlledBob.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\ParticleSystemMultiplier.cs" />
@@ -94,7 +95,6 @@
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\AxisTouchButton.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Environment_Model\Effects\hit_marker_particle\Scripts\Hose.cs" />
-     <Compile Include="Assets\Game\Scripts\coin.cs" />
      <None Include="Assets\Game\Level_Dont_Touch\Environment_Model\Cinema Suite\Cinema Themes\ReadMe.txt" />
      <None Include="Assets\Game\Level_Dont_Touch\Environment_Model\Fonts\OFL.txt" />
      <None Include="Assets\Game\Level_Dont_Touch\Environment_Model\Shaders\ToonShader.shader" />
