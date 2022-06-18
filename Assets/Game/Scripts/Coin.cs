@@ -26,6 +26,14 @@ public class Coin : MonoBehaviour
                      //play the coin sound
                     AudioSource.PlayClipAtPoint(_coinPickupSound, transform.position, 1f);
 
+                    //get access to UIManager
+                    UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+                    if (uiManager != null) //check if we found the component
+                    {
+                        uiManager.CollectedCoin();
+                    }
+
                     //destroy the coin object
                     Destroy(this.gameObject);
                 }
