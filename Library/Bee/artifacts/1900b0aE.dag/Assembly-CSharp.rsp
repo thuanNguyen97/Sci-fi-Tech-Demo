@@ -403,6 +403,7 @@
 "Assets/Game/Scripts/LookX.cs"
 "Assets/Game/Scripts/LookY.cs"
 "Assets/Game/Scripts/Player.cs"
+"Assets/Game/Scripts/SharkShop.cs"
 "Assets/Game/Scripts/UIManager.cs"
 -langversion:9.0
 

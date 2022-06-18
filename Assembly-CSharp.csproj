@@ -70,6 +70,7 @@
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\TimedObjectDestructor.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Characters\ThirdPersonCharacter\Scripts\ThirdPersonUserControl.cs" />
+     <Compile Include="Assets\Game\Scripts\SharkShop.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\Utility\DragRigidbody.cs" />
      <Compile Include="Assets\Game\Level_Dont_Touch\Standard Assets\CrossPlatformInput\Scripts\PlatformSpecific\StandaloneInput.cs" />
