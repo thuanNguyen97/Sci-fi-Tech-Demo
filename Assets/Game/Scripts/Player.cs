@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     [SerializeField]
     private GameObject _weapon;
 
-    private int _maxAmmo = 50;
+    private int _maxAmmo = 100;
 
     private bool _isReloading;
 
@@ -86,35 +86,47 @@ public class Player : MonoBehaviour
     void Shoot()
     {
         Ray rayOrigin = Camera.main.ViewportPointToRay(new Vector3(0.5f,  0.5f, 0)); // cast a ray from the center of the screen
-            RaycastHit hitInfo; // this parameter store the data of what we hit
+        RaycastHit hitInfo; // this parameter store the data of what we hit
 
-            //turn on muzzle flash
-            _muzzleFlash.SetActive(true);
+        //turn on muzzle flash
+        _muzzleFlash.SetActive(true);
 
-            //minus current ammo
-            _currentAmmo--;
+        //minus current ammo
+        _currentAmmo--;
 
-            //update ui ammo
-            _uiManager.UpdateAmmo(_currentAmmo);
+        //update ui ammo
+        _uiManager.UpdateAmmo(_currentAmmo);
 
-            //if weapon sound is not play
-            //play the weapon sound
-            if (_weaponAudio.isPlaying == false)
+        //if weapon sound is not play
+        //play the weapon sound
+        if (_weaponAudio.isPlaying == false)
+        {
+            _weaponAudio.Play();
+        }
+
+        //check if we ray cast hit something
+        //get the exact name of what we hit
+        if (Physics.Raycast(rayOrigin, out hitInfo))
+        {
+            Debug.Log("Hit: " + hitInfo.transform.name);
+
+            // instantiate hit marker as a game object
+            // then destroy it
+            GameObject hitMarker = (GameObject) Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.identity);
+            Destroy(hitMarker, 0.5f);
+
+            //check if we hit the crare
+            Destructable crate = hitInfo.transform.GetComponent<Destructable>();
+
+            //call the destroy method
+            if (crate != null)
             {
-                _weaponAudio.Play();
+                crate.DestroyCrate();
             }
 
-            //check if we ray cast hit something
-            //get the exact name of what we hit
-            if (Physics.Raycast(rayOrigin, out hitInfo))
-            {
-                Debug.Log("Hit: " + hitInfo.transform.name);
+        }
 
-                // instantiate hit marker as a game object
-                // then destroy it
-                GameObject hitMarker = (GameObject) Instantiate(_hitMarkerPrefab, hitInfo.point, Quaternion.identity);
-                Destroy(hitMarker, 0.5f); 
-            }
+
     }
 
     void CalculateMovement()

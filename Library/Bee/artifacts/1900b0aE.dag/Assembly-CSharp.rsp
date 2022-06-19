@@ -400,6 +400,7 @@
 "Assets/Game/Level_Dont_Touch/Standard Assets/Utility/WaypointCircuit.cs"
 "Assets/Game/Level_Dont_Touch/Standard Assets/Utility/WaypointProgressTracker.cs"
 "Assets/Game/Scripts/Coin.cs"
+"Assets/Game/Scripts/Destructable.cs"
 "Assets/Game/Scripts/LookX.cs"
 "Assets/Game/Scripts/LookY.cs"
 "Assets/Game/Scripts/Player.cs"
