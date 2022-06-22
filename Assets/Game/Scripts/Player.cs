@@ -45,14 +45,25 @@ public class Player : MonoBehaviour
 
         //find the canvas to access the component of it
         _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        //if currentAmmo > 10 
+        //disable reload text
+        if (_currentAmmo > 10)
+        {
+            _uiManager.reloadTextDisable();
+        }
+
+
         //if left mouse clicked
+        //weappon is enable
         //cast a ray at the center of the main camera
-        if (Input.GetMouseButton(0) && _currentAmmo > 0) // get mouse left click (hold)
+        if (Input.GetMouseButton(0) && _currentAmmo > 0 && _weapon.activeSelf) // get mouse left click (hold)
         {
             Shoot();
         }
@@ -79,7 +90,7 @@ public class Player : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-
+    
         CalculateMovement();
     }
 
@@ -93,6 +104,13 @@ public class Player : MonoBehaviour
 
         //minus current ammo
         _currentAmmo--;
+
+        //if current ammo < 10 
+        //enable reload text
+        if (_currentAmmo < 10)
+        {
+            _uiManager.reloadTextEnable();
+        }    
 
         //update ui ammo
         _uiManager.UpdateAmmo(_currentAmmo);
@@ -165,5 +183,10 @@ public class Player : MonoBehaviour
     public void EnableWeapon()
     {
         _weapon.SetActive(true);
+    }
+
+    public void DisableWeapon()
+    {
+        _weapon.SetActive(false);
     }
 }

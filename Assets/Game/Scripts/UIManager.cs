@@ -7,6 +7,12 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField]
     private Text _ammoText;
+    [SerializeField]
+    private Text _reloadText;
+    [SerializeField]
+    private Text _pickUpText;
+    [SerializeField]
+    private Text _buyText;
 
     [SerializeField]
     private GameObject _coin;
@@ -24,5 +30,25 @@ public class UIManager : MonoBehaviour
     public void RemoveCoin()
     {
         _coin.SetActive(false);
+    }
+
+    public void reloadTextDisable()
+    {
+        _reloadText.enabled = false; //turn off reload text
+    }
+
+    public void reloadTextEnable()
+    {
+        _reloadText.enabled = true; //turn on reload text
+    }
+
+    public void pickupTextDisable()
+    {
+        _pickUpText.enabled = false;
+    }
+
+    public void pickUpTextEnable()
+    {
+        _pickUpText.enabled = true;
     }
 }

@@ -11,7 +11,11 @@ public class Coin : MonoBehaviour
     private void OnTriggerStay(Collider other) 
     {
         if (other.tag == "Player")
-        {
+        {   
+            //get access to UIManager
+            UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+            uiManager.pickUpTextEnable();
+            
             //check if player collide with the coin and e key pressed
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -26,12 +30,10 @@ public class Coin : MonoBehaviour
                      //play the coin sound
                     AudioSource.PlayClipAtPoint(_coinPickupSound, transform.position, 1f);
 
-                    //get access to UIManager
-                    UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
-
                     if (uiManager != null) //check if we found the component
                     {
                         uiManager.CollectedCoin();
+                        uiManager.pickupTextDisable();
                     }
 
                     //destroy the coin object
