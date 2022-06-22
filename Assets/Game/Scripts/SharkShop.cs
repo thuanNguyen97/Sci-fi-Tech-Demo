@@ -17,20 +17,26 @@ public class SharkShop : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            Player player = other.GetComponent<Player>();
+            UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+
+            if (player.hasCoin == true)
+            {
+                uiManager.buyTextEnable();
+            }
+
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Player player = other.GetComponent<Player>();
                 if (player != null)
                 {
                     if (player.hasCoin == true)
                     {
                         player.hasCoin = false;
-
-                        UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
-
+                        
                         if (uiManager != null)
                         {
                             uiManager.RemoveCoin();
+                            uiManager.buyTextDisable();
                         }
 
                         AudioSource audio = GetComponent<AudioSource>();

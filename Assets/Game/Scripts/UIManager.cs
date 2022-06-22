@@ -17,6 +17,12 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private GameObject _coin;
 
+    public void Start()
+    {
+        _pickUpText.enabled = false;
+        _buyText.enabled = false;
+    }
+
     public void UpdateAmmo(int count)
     {
         _ammoText.text = "Ammo: " + count;
@@ -50,5 +56,15 @@ public class UIManager : MonoBehaviour
     public void pickUpTextEnable()
     {
         _pickUpText.enabled = true;
+    }
+
+    public void buyTextDisable()
+    {
+        _buyText.enabled = false;
+    }
+
+    public void buyTextEnable()
+    {
+        _buyText.enabled = true;
     }
 }

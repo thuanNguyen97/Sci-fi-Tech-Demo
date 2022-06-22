@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour
 {
     [SerializeField]
     private AudioClip _coinPickupSound;
-
+    
     //check for collision (onTrigger)
     private void OnTriggerStay(Collider other) 
     {
@@ -14,13 +14,19 @@ public class Coin : MonoBehaviour
         {   
             //get access to UIManager
             UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
-            uiManager.pickUpTextEnable();
+
+            //get player component
+            Player player = other.GetComponent<Player>();
+
+            if (player.hasCoin == false)
+            {
+                uiManager.pickUpTextEnable();
+            }
             
             //check if player collide with the coin and e key pressed
             if (Input.GetKeyDown(KeyCode.E))
             {
-                //get player component
-                Player player = other.GetComponent<Player>();
+                
 
                 if (player != null) 
                 {
